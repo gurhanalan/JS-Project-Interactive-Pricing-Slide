@@ -1,0 +1,39 @@
+/* 
+0 - 600px    :     Phone
+600 - 900px  :    Tablet Portrait
+900 - 1200px :    Tablet Landscape
+1200 - 1800px:    Where this style applies
+1800px +     :    Big Desktop
+
+$breakpoint argument choices
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER : Base + typograpy > general layout + grid > page layout > componenets
+1em = 16px
+
+*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  background-image: url("../images/bg-pattern.svg"), linear-gradient(90deg, rgba(206, 215, 238, 0.418), rgba(206, 215, 238, 0.699));
+  background-repeat: no-repeat; }
