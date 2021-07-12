@@ -35,5 +35,23 @@ body {
   justify-content: center;
   height: 100vh;
   overflow: hidden;
-  background-image: url("../images/bg-pattern.svg"), linear-gradient(90deg, rgba(206, 215, 238, 0.418), rgba(206, 215, 238, 0.699));
-  background-repeat: no-repeat; }
+  background-color: #fafbff;
+  background-image: url("../images/bg-pattern.svg");
+  background-repeat: no-repeat;
+  background-size: 100vw 55vh; }
+
+.title {
+  background-image: url("../images/pattern-circles.svg");
+  background-size: 10rem;
+  background-repeat: no-repeat;
+  height: 10rem;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 1rem; }
+  .title h1 {
+    font-size: 3rem; }
+  .title h3 {
+    font-size: 1.3rem; }
