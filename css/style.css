@@ -33,6 +33,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 3rem;
   height: 100vh;
   overflow: hidden;
   background-color: #fafbff;
@@ -42,16 +43,55 @@ body {
 
 .title {
   background-image: url("../images/pattern-circles.svg");
-  background-size: 10rem;
+  background-size: 15rem;
   background-repeat: no-repeat;
-  height: 10rem;
+  height: 15rem;
   background-position: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  gap: 1rem; }
+  gap: 1rem;
+  color: #293356; }
   .title h1 {
-    font-size: 3rem; }
+    font-size: 3rem;
+    font-weight: 200; }
   .title h3 {
-    font-size: 1.3rem; }
+    font-size: 1.3rem;
+    font-weight: 200; }
+
+.card {
+  background-color: white;
+  height: 30rem;
+  width: 40rem;
+  box-shadow: 0 2rem 3rem rgba(41, 51, 86, 0.281);
+  border-radius: 1rem;
+  padding: 3rem; }
+  .card__upper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 3rem 1rem; }
+    .card__upper__page-views {
+      color: #858fad;
+      letter-spacing: 2px;
+      text-transform: uppercase; }
+    .card__upper__pricing {
+      display: flex;
+      gap: 1rem;
+      align-items: center; }
+    .card__upper__price {
+      color: #293356;
+      font-size: 3rem; }
+      .card__upper__price::before {
+        content: "$"; }
+    .card__upper__period {
+      font-size: 1.2rem;
+      color: #858fad; }
+      .card__upper__period::before {
+        content: "/ "; }
+    .card__upper__range {
+      grid-column: span 2; }
+      .card__upper__range::-webkit-slider-thumb {
+        background-color: brown;
+        height: 5rem; }
