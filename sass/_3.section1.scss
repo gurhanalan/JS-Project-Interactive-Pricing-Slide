@@ -89,5 +89,51 @@ body {
                 height: 5rem;
             }
         }
+
+        // Billing section
+        &__billing {
+            grid-column: span 2;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            justify-self: center;
+
+            font-size: 1.2rem;
+            color: hsl(225, 20%, 60%);
+            font-weight: 300;
+            &__checkbox {
+                input {
+                    appearance: none;
+
+                    &:checked + label {
+                        background-color: coral;
+                    }
+
+                    &:checked + label::before {
+                        transform: translateX(1.5rem);
+                    }
+                }
+
+                label {
+                    height: 2rem;
+                    width: 4rem;
+                    border-radius: 2rem;
+                    background-color: cadetblue;
+                    display: inline-block;
+                    position: relative;
+
+                    &::before {
+                        content: "";
+                        height: 1.5rem;
+                        width: 1.5rem;
+                        background-color: crimson;
+                        border-radius: 50%;
+                        position: absolute;
+                        top: 0.25rem;
+                        left: 0.5rem;
+                    }
+                }
+            }
+        }
     }
 }
