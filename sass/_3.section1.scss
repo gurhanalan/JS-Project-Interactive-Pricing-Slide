@@ -136,9 +136,9 @@ body {
             input {
                 appearance: none;
 
-                &:checked + label {
-                    // background-color: coral;
-                }
+                // &:checked + label {
+                //     // background-color: coral;
+                // }
 
                 &:checked + label::before {
                     transform: translateX(1.5rem);
@@ -220,5 +220,14 @@ body {
         padding: 1rem 2rem;
         border: none;
         border-radius: 2rem;
+        transition: all 0.3s;
+
+        &:hover {
+            // filter: brightness(140%);
+            background-color: lighten(hsl(227, 35%, 25%), 20%);
+        }
+        &:active {
+            background-color: darken(hsl(227, 35%, 25%), 10%);
+        }
     }
 }

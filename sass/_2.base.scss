@@ -11,11 +11,11 @@ html {
     font-size: 62.5%; // 1 rem = 10 px; 10px/16px = 62.5
 
     @include respond-min(700px) {
-        font-size: 100%;
+        font-size: 90%;
     }
-    @include respond-min(1500px) {
-        font-size: 150%;
-    }
+    // @include respond-min(1500px) {
+    //     font-size: 120%;
+    // }
     // @include respond(tab-land) {
     //    font-size: 56.25%; //1 rem = 9px; 9/16=
     // }
