@@ -51,11 +51,17 @@ body {
         grid-template-columns: 1fr 1fr;
         align-items: center;
         gap: 3rem 1rem;
+        padding-bottom: 2rem;
+        border-bottom: 3px solid hsl(230, 100%, 99%);
 
         &__page-views {
             color: hsl(225, 20%, 60%);
             letter-spacing: 2px;
             text-transform: uppercase;
+
+            &::after {
+                content: "K pageviews";
+            }
         }
 
         &__pricing {
@@ -106,7 +112,7 @@ body {
                     appearance: none;
 
                     &:checked + label {
-                        background-color: coral;
+                        // background-color: coral;
                     }
 
                     &:checked + label::before {
@@ -118,20 +124,44 @@ body {
                     height: 2rem;
                     width: 4rem;
                     border-radius: 2rem;
-                    background-color: cadetblue;
+                    background-color: hsl(223, 50%, 87%);
                     display: inline-block;
                     position: relative;
+                    transition: all 0.2s;
+
+                    &:hover {
+                        background-color: hsl(174, 77%, 80%);
+                    }
 
                     &::before {
                         content: "";
                         height: 1.5rem;
                         width: 1.5rem;
-                        background-color: crimson;
+                        background-color: white;
                         border-radius: 50%;
                         position: absolute;
                         top: 0.25rem;
                         left: 0.5rem;
+                        transition: all 0.2s;
                     }
+                }
+            }
+
+            &__yearly {
+                position: relative;
+                &::after {
+                    content: "25% discount";
+
+                    white-space: nowrap;
+                    position: absolute;
+                    left: 110%;
+                    color: hsl(15, 100%, 70%);
+                    background-color: hsl(14, 92%, 95%);
+                    padding: 0.5rem;
+                    border-radius: 1rem;
+                    font-size: 0.8rem;
+                    top: 50%;
+                    transform: translateY(-50%);
                 }
             }
         }

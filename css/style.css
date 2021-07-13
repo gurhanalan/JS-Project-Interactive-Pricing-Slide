@@ -71,11 +71,15 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    gap: 3rem 1rem; }
+    gap: 3rem 1rem;
+    padding-bottom: 2rem;
+    border-bottom: 3px solid #fafbff; }
     .card__upper__page-views {
       color: #858fad;
       letter-spacing: 2px;
       text-transform: uppercase; }
+      .card__upper__page-views::after {
+        content: "K pageviews"; }
     .card__upper__pricing {
       display: flex;
       gap: 1rem;
@@ -106,23 +110,39 @@ body {
       font-weight: 300; }
       .card__upper__billing__checkbox input {
         appearance: none; }
-        .card__upper__billing__checkbox input:checked + label {
-          background-color: coral; }
         .card__upper__billing__checkbox input:checked + label::before {
           transform: translateX(1.5rem); }
       .card__upper__billing__checkbox label {
         height: 2rem;
         width: 4rem;
         border-radius: 2rem;
-        background-color: cadetblue;
+        background-color: #cdd7ee;
         display: inline-block;
-        position: relative; }
+        position: relative;
+        transition: all 0.2s; }
+        .card__upper__billing__checkbox label:hover {
+          background-color: #a5f3eb; }
         .card__upper__billing__checkbox label::before {
           content: "";
           height: 1.5rem;
           width: 1.5rem;
-          background-color: crimson;
+          background-color: white;
           border-radius: 50%;
           position: absolute;
           top: 0.25rem;
-          left: 0.5rem; }
+          left: 0.5rem;
+          transition: all 0.2s; }
+      .card__upper__billing__yearly {
+        position: relative; }
+        .card__upper__billing__yearly::after {
+          content: "25% discount";
+          white-space: nowrap;
+          position: absolute;
+          left: 110%;
+          color: #ff8c66;
+          background-color: #feece7;
+          padding: 0.5rem;
+          border-radius: 1rem;
+          font-size: 0.8rem;
+          top: 50%;
+          transform: translateY(-50%); }
