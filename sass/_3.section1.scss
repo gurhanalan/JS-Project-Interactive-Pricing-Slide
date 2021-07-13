@@ -40,130 +40,185 @@ body {
 
 .card {
     background-color: white;
-    height: 30rem;
-    width: 40rem;
+    // height: 30rem;
+    // width: 40rem;
     box-shadow: 0 2rem 3rem hsla(227, 35%, 25%, 0.281);
     border-radius: 1rem;
     padding: 3rem;
+}
 
-    &__upper {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+.card__upper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 3rem 1rem;
+    padding-bottom: 2rem;
+    border-bottom: 3px solid hsl(230, 100%, 99%);
+
+    &__page-views {
+        color: hsl(225, 20%, 60%);
+        letter-spacing: 2px;
+        text-transform: uppercase;
+
+        &::after {
+            content: "K pageviews";
+        }
+    }
+
+    &__pricing {
+        display: flex;
+        gap: 1rem;
         align-items: center;
-        gap: 3rem 1rem;
-        padding-bottom: 2rem;
-        border-bottom: 3px solid hsl(230, 100%, 99%);
+    }
 
-        &__page-views {
-            color: hsl(225, 20%, 60%);
-            letter-spacing: 2px;
-            text-transform: uppercase;
+    &__price {
+        color: hsl(227, 35%, 25%);
+        font-size: 3rem;
+        &::before {
+            content: "$";
+        }
+    }
 
-            &::after {
-                content: "K pageviews";
-            }
+    &__period {
+        font-size: 1.2rem;
+        color: hsl(225, 20%, 60%);
+        &::before {
+            content: "/ ";
+        }
+    }
+
+    &__range {
+        grid-column: span 2;
+        appearance: none;
+        // overflow: hidden;
+        // width: 80%;
+        // -webkit-appearance: none;
+        // background-color: #9a905d;
+        outline: none;
+
+        &::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            // border: 1px solid #000000;
+            height: 4rem;
+            width: 4rem;
+            border-radius: 50%;
+            background: hsl(174, 86%, 45%);
+            background-image: url("../images/icon-slider.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 3rem;
+            margin-top: -1.5rem;
+            // transform: translateY(-50%);
         }
 
-        &__pricing {
-            display: flex;
-            gap: 1rem;
-            align-items: center;
+        &::-webkit-slider-runnable-track {
+            -webkit-appearance: none;
+            height: 1rem;
+            background-color: hsl(174, 77%, 80%);
+            cursor: pointer;
+            border-radius: 4px;
+            border: none;
         }
+    }
 
-        &__price {
-            color: hsl(227, 35%, 25%);
-            font-size: 3rem;
-            &::before {
-                content: "$";
-            }
-        }
+    // Billing section
+    &__billing {
+        grid-column: span 2;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        justify-self: center;
 
-        &__period {
-            font-size: 1.2rem;
-            color: hsl(225, 20%, 60%);
-            &::before {
-                content: "/ ";
-            }
-        }
+        font-size: 1.2rem;
+        color: hsl(225, 20%, 60%);
+        font-weight: 300;
+        &__checkbox {
+            input {
+                appearance: none;
 
-        &__range {
-            grid-column: span 2;
-
-            &::-webkit-slider-thumb {
-                // background-image: url("../images/icon-slider.svg");
-                background-color: brown;
-                height: 5rem;
-            }
-        }
-
-        // Billing section
-        &__billing {
-            grid-column: span 2;
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            justify-self: center;
-
-            font-size: 1.2rem;
-            color: hsl(225, 20%, 60%);
-            font-weight: 300;
-            &__checkbox {
-                input {
-                    appearance: none;
-
-                    &:checked + label {
-                        // background-color: coral;
-                    }
-
-                    &:checked + label::before {
-                        transform: translateX(1.5rem);
-                    }
+                &:checked + label {
+                    // background-color: coral;
                 }
 
-                label {
-                    height: 2rem;
-                    width: 4rem;
-                    border-radius: 2rem;
-                    background-color: hsl(223, 50%, 87%);
-                    display: inline-block;
-                    position: relative;
-                    transition: all 0.2s;
-
-                    &:hover {
-                        background-color: hsl(174, 77%, 80%);
-                    }
-
-                    &::before {
-                        content: "";
-                        height: 1.5rem;
-                        width: 1.5rem;
-                        background-color: white;
-                        border-radius: 50%;
-                        position: absolute;
-                        top: 0.25rem;
-                        left: 0.5rem;
-                        transition: all 0.2s;
-                    }
+                &:checked + label::before {
+                    transform: translateX(1.5rem);
                 }
             }
 
-            &__yearly {
+            label {
+                height: 2rem;
+                width: 4rem;
+                border-radius: 2rem;
+                background-color: hsl(223, 50%, 87%);
+                display: inline-block;
                 position: relative;
-                &::after {
-                    content: "25% discount";
+                transition: all 0.2s;
 
-                    white-space: nowrap;
+                &:hover {
+                    background-color: hsl(174, 77%, 80%);
+                }
+
+                &::before {
+                    content: "";
+                    height: 1.5rem;
+                    width: 1.5rem;
+                    background-color: white;
+                    border-radius: 50%;
                     position: absolute;
-                    left: 110%;
-                    color: hsl(15, 100%, 70%);
-                    background-color: hsl(14, 92%, 95%);
-                    padding: 0.5rem;
-                    border-radius: 1rem;
-                    font-size: 0.8rem;
-                    top: 50%;
-                    transform: translateY(-50%);
+                    top: 0.25rem;
+                    left: 0.5rem;
+                    transition: all 0.2s;
                 }
             }
         }
+
+        &__yearly {
+            position: relative;
+            &::after {
+                content: "25% discount";
+
+                white-space: nowrap;
+                position: absolute;
+                left: 110%;
+                color: hsl(15, 100%, 70%);
+                background-color: hsl(14, 92%, 95%);
+                padding: 0.5rem;
+                border-radius: 1rem;
+                font-size: 0.8rem;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+}
+
+.card__lower {
+    padding-top: 2rem;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+    &__text-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    &__text-box {
+        display: flex;
+        gap: 1rem;
+        font-size: 1.2rem;
+        color: hsl(225, 20%, 60%);
+        font-weight: 300;
+    }
+
+    &__btn {
+        margin: 0 auto;
+        background-color: hsl(227, 35%, 25%);
+        color: white;
+        padding: 1rem 2rem;
+        border: none;
+        border-radius: 2rem;
     }
 }

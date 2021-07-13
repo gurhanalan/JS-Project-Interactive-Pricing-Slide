@@ -26,6 +26,12 @@ ORDER : Base + typograpy > general layout + grid > page layout > componenets
 
 html {
   font-size: 62.5%; }
+  @media only screen and (min-width: 700px) {
+    html {
+      font-size: 100%; } }
+  @media only screen and (min-width: 1500px) {
+    html {
+      font-size: 150%; } }
 
 body {
   font-family: "Roboto", sans-serif;
@@ -62,87 +68,126 @@ body {
 
 .card {
   background-color: white;
-  height: 30rem;
-  width: 40rem;
   box-shadow: 0 2rem 3rem rgba(41, 51, 86, 0.281);
   border-radius: 1rem;
   padding: 3rem; }
-  .card__upper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+
+.card__upper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 3rem 1rem;
+  padding-bottom: 2rem;
+  border-bottom: 3px solid #fafbff; }
+  .card__upper__page-views {
+    color: #858fad;
+    letter-spacing: 2px;
+    text-transform: uppercase; }
+    .card__upper__page-views::after {
+      content: "K pageviews"; }
+  .card__upper__pricing {
+    display: flex;
+    gap: 1rem;
+    align-items: center; }
+  .card__upper__price {
+    color: #293356;
+    font-size: 3rem; }
+    .card__upper__price::before {
+      content: "$"; }
+  .card__upper__period {
+    font-size: 1.2rem;
+    color: #858fad; }
+    .card__upper__period::before {
+      content: "/ "; }
+  .card__upper__range {
+    grid-column: span 2;
+    appearance: none;
+    outline: none; }
+    .card__upper__range::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      height: 4rem;
+      width: 4rem;
+      border-radius: 50%;
+      background: #10d5c2;
+      background-image: url("../images/icon-slider.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 3rem;
+      margin-top: -1.5rem; }
+    .card__upper__range::-webkit-slider-runnable-track {
+      -webkit-appearance: none;
+      height: 1rem;
+      background-color: #a5f3eb;
+      cursor: pointer;
+      border-radius: 4px;
+      border: none; }
+  .card__upper__billing {
+    grid-column: span 2;
+    display: flex;
     align-items: center;
-    gap: 3rem 1rem;
-    padding-bottom: 2rem;
-    border-bottom: 3px solid #fafbff; }
-    .card__upper__page-views {
-      color: #858fad;
-      letter-spacing: 2px;
-      text-transform: uppercase; }
-      .card__upper__page-views::after {
-        content: "K pageviews"; }
-    .card__upper__pricing {
-      display: flex;
-      gap: 1rem;
-      align-items: center; }
-    .card__upper__price {
-      color: #293356;
-      font-size: 3rem; }
-      .card__upper__price::before {
-        content: "$"; }
-    .card__upper__period {
-      font-size: 1.2rem;
-      color: #858fad; }
-      .card__upper__period::before {
-        content: "/ "; }
-    .card__upper__range {
-      grid-column: span 2; }
-      .card__upper__range::-webkit-slider-thumb {
-        background-color: brown;
-        height: 5rem; }
-    .card__upper__billing {
-      grid-column: span 2;
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      justify-self: center;
-      font-size: 1.2rem;
-      color: #858fad;
-      font-weight: 300; }
-      .card__upper__billing__checkbox input {
-        appearance: none; }
-        .card__upper__billing__checkbox input:checked + label::before {
-          transform: translateX(1.5rem); }
-      .card__upper__billing__checkbox label {
-        height: 2rem;
-        width: 4rem;
-        border-radius: 2rem;
-        background-color: #cdd7ee;
-        display: inline-block;
-        position: relative;
+    gap: 1rem;
+    justify-self: center;
+    font-size: 1.2rem;
+    color: #858fad;
+    font-weight: 300; }
+    .card__upper__billing__checkbox input {
+      appearance: none; }
+      .card__upper__billing__checkbox input:checked + label::before {
+        transform: translateX(1.5rem); }
+    .card__upper__billing__checkbox label {
+      height: 2rem;
+      width: 4rem;
+      border-radius: 2rem;
+      background-color: #cdd7ee;
+      display: inline-block;
+      position: relative;
+      transition: all 0.2s; }
+      .card__upper__billing__checkbox label:hover {
+        background-color: #a5f3eb; }
+      .card__upper__billing__checkbox label::before {
+        content: "";
+        height: 1.5rem;
+        width: 1.5rem;
+        background-color: white;
+        border-radius: 50%;
+        position: absolute;
+        top: 0.25rem;
+        left: 0.5rem;
         transition: all 0.2s; }
-        .card__upper__billing__checkbox label:hover {
-          background-color: #a5f3eb; }
-        .card__upper__billing__checkbox label::before {
-          content: "";
-          height: 1.5rem;
-          width: 1.5rem;
-          background-color: white;
-          border-radius: 50%;
-          position: absolute;
-          top: 0.25rem;
-          left: 0.5rem;
-          transition: all 0.2s; }
-      .card__upper__billing__yearly {
-        position: relative; }
-        .card__upper__billing__yearly::after {
-          content: "25% discount";
-          white-space: nowrap;
-          position: absolute;
-          left: 110%;
-          color: #ff8c66;
-          background-color: #feece7;
-          padding: 0.5rem;
-          border-radius: 1rem;
-          font-size: 0.8rem;
-          top: 50%;
-          transform: translateY(-50%); }
+    .card__upper__billing__yearly {
+      position: relative; }
+      .card__upper__billing__yearly::after {
+        content: "25% discount";
+        white-space: nowrap;
+        position: absolute;
+        left: 110%;
+        color: #ff8c66;
+        background-color: #feece7;
+        padding: 0.5rem;
+        border-radius: 1rem;
+        font-size: 0.8rem;
+        top: 50%;
+        transform: translateY(-50%); }
+
+.card__lower {
+  padding-top: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center; }
+  .card__lower__text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; }
+  .card__lower__text-box {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.2rem;
+    color: #858fad;
+    font-weight: 300; }
+  .card__lower__btn {
+    margin: 0 auto;
+    background-color: #293356;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 2rem; }
