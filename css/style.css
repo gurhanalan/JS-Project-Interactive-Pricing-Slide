@@ -65,6 +65,7 @@ body {
 
 .card {
   background-color: white;
+  width: 40rem;
   box-shadow: 0 2rem 3rem rgba(41, 51, 86, 0.281);
   border-radius: 1rem;
   padding: 3rem; }
@@ -77,11 +78,12 @@ body {
   padding-bottom: 2rem;
   border-bottom: 3px solid #fafbff; }
   .card__upper__page-views {
-    color: #858fad;
     letter-spacing: 2px;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    color: #293356; }
     .card__upper__page-views::after {
-      content: "K pageviews"; }
+      content: "K pageviews";
+      color: #858fad; }
   .card__upper__pricing {
     display: flex;
     gap: 1rem;

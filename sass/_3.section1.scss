@@ -41,7 +41,7 @@ body {
 .card {
     background-color: white;
     // height: 30rem;
-    // width: 40rem;
+    width: 40rem;
     box-shadow: 0 2rem 3rem hsla(227, 35%, 25%, 0.281);
     border-radius: 1rem;
     padding: 3rem;
@@ -56,12 +56,15 @@ body {
     border-bottom: 3px solid hsl(230, 100%, 99%);
 
     &__page-views {
-        color: hsl(225, 20%, 60%);
         letter-spacing: 2px;
         text-transform: uppercase;
+        // font-size: larger;
+        color: hsl(227, 35%, 25%);
 
         &::after {
             content: "K pageviews";
+            // font-size: smaller;
+            color: hsl(225, 20%, 60%);
         }
     }
 
