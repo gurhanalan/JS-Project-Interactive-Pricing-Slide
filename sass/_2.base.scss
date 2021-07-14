@@ -10,9 +10,13 @@
 html {
     font-size: 62.5%; // 1 rem = 10 px; 10px/16px = 62.5
 
+    @include respond-max(430px) {
+        font-size: 50%;
+    }
     @include respond-min(700px) {
         font-size: 90%;
     }
+
     // @include respond-min(1500px) {
     //     font-size: 120%;
     // }

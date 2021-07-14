@@ -40,7 +40,7 @@ function display() {
     });
 }
 
-console.log(periodCheckboxEl.checked);
+// Event Listeners
 
 periodCheckboxEl.addEventListener("change", () => {
     yearlyBilling = periodCheckboxEl.checked;
@@ -52,15 +52,16 @@ periodCheckboxEl.addEventListener("change", () => {
 rangeEl.addEventListener("change", () => {
     range = rangeEl.value;
 
-    console.log(range);
-    console.log(priceList[range]);
     [page, price] = priceList[range];
-    // if (yearlyBilling) {
-    //     price = price * 12 * 0.75;
-    // }
+
     display();
 });
 
 btnEl.addEventListener("click", () => {
     formEl.reset();
+    range = 3;
+    yearlyBilling = false;
+    page = 100;
+    price = 16;
+    display();
 });

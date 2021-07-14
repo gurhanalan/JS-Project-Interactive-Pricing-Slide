@@ -26,6 +26,9 @@ ORDER : Base + typograpy > general layout + grid > page layout > componenets
 
 html {
   font-size: 62.5%; }
+  @media only screen and (max-width: 430px) {
+    html {
+      font-size: 50%; } }
   @media only screen and (min-width: 700px) {
     html {
       font-size: 90%; } }
@@ -190,7 +193,8 @@ body {
     padding: 1rem 2rem;
     border: none;
     border-radius: 2rem;
-    transition: all 0.3s; }
+    transition: all 0.3s;
+    outline: none; }
     .card__lower__btn:hover {
       background-color: #4b5c9b; }
     .card__lower__btn:active {
