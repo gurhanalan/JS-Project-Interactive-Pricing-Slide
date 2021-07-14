@@ -4,14 +4,14 @@ This is a solution to the [Interactive pricing component challenge on Frontend M
 
 ## Table of contents
 
--   [Frontend Mentor - Interactive pricing component solution](#frontend-mentor---interactive-pricing-component-solution)
-    -   [Table of contents](#table-of-contents)
-    -   [Overview](#overview)
-        -   [The challenge](#the-challenge)
-        -   [Screenshot](#screenshot)
-        -   [Links](#links)
-    -   [My process](#my-process)
-        -   [Built with](#built-with)
+- [Frontend Mentor - Interactive pricing component solution](#frontend-mentor---interactive-pricing-component-solution)
+  - [Table of contents](#table-of-contents)
+  - [Overview](#overview)
+    - [The challenge](#the-challenge)
+    - [Screenshot](#screenshot)
+    - [Links](#links)
+  - [My process](#my-process)
+    - [Built with](#built-with)
 
 ## Overview
 
@@ -21,7 +21,7 @@ Users should be able to:
 
 -   View the optimal layout for the app depending on their device's screen size
 -   See hover states for all interactive elements on the page
--   Calculate the correct tip and total cost of the bill per person
+-   Use the slider and toggle to see prices for different page view numbers
 
 ### Screenshot
 
