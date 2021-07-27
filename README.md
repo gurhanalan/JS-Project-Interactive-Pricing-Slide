@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Links
 
--   Solution URL: [Live Website](https://your-solution-url.com)
+-   Solution URL: [Live Website](https://gurhanalan.github.io/JS-Project-Interactive-Pricing-Slide/)
 
 ## My process
 
